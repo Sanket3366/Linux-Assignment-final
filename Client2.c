@@ -20,7 +20,7 @@ servaddr.sin_port= htons(8000);
 inet_pton(AF_INET,serv_ip,&servaddr.sin_addr);
 addr_len=sizeof(struct sockaddr_in);
 ret_val=sendto(sockfd,msg,strlen(msg),0,(struct sockaddr *)&servaddr,addr_len);
-printf("ret val of sendto = %d\n",ret_val);
+printf("Rets  Value Of Send to is = %d\n",ret_val);
 
 close(sockfd);
 
