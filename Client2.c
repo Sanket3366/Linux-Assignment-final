@@ -7,7 +7,7 @@
 #include<stdlib.h>
 
 int main(){
-char *serv_ip= "127.0.0.1";  //INADDR_ANY
+char *serv_ip= "127.0.0.1"; 
 char *msg="abcdefghijklmno";
 int sockfd,ret_val;
 socklen_t addr_len;
