@@ -42,12 +42,10 @@ exit(2);
 listen(listfd,5);
 
 while(1){
-//char buf[200];
 pid_t p;
-//int n;
 clilen=sizeof(cliaddr);
 connfd=accept(listfd,(struct sockaddr *)&cliaddr,&clilen);
-printf("client connected\n");
+printf("Client is  connected sucessfully\n");
 p=fork();
 if(p==0){
 close(listfd);
