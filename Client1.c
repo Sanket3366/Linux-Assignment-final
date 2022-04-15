@@ -9,7 +9,7 @@
 int main(){
 char buf[200];
 int n;
-char *serv_ip= "127.0.0.1";  //INADDR_ANY
+char *serv_ip= "127.0.0.1";
 int sockfd,ret_val;
 struct sockaddr_in servaddr;
 sockfd = socket(AF_INET,SOCK_STREAM,0);
@@ -26,14 +26,14 @@ perror("connect: ");
 exit(1);
 
 }
-printf("client established connection with server\n");
+printf("Client Established the Connection  servers is:-\n");
 while(1){
-printf("enter message");
+printf("Enter The  Message here:-");
 gets(buf);
 write(sockfd,buf,strlen(buf));
 n=read(sockfd,buf,200);
 buf[n]="\0";
-printf("rec'd %s from server\n",buf);
+printf("Rec'd %s From Server is-\n",buf);
 }
 close(sockfd);
 
