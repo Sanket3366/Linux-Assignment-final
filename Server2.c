@@ -28,15 +28,15 @@ perror("bind: ");
 exit(2);
 }
 //listen(listfd,5);
-printf("socket bound to port 8000\n");
+printf("Socket Bound to Port 8000 is:-\n");
 clilen=sizeof(struct sockaddr_in);
 while(1){
-printf("before recv from\n");
+printf("Before recv from is:-\n");
 n=recvfrom(sockfd,buf,10000,0,(struct sockaddr *)&cliaddr,&clilen);
-printf("client connected\n");
+printf("Client Connected is\n");
 printf("received bytes = %d\n",n);
 buf[n]='\0';
-printf("msg from client = %s\n",buf);
+printf("Msg from The Client is = %s\n",buf);
 
 }
 
